@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Title Page-->
+    <title>Predict</title>
+
+    <!-- Icons font CSS-->
+    <link rel="shortcut icon" type="image/jpg" href="static/images/banner_1.png" />
+   
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    
+
+    <!-- Main CSS-->
+    <link href="static/css/main.css" rel="stylesheet" media="all">
+    <link href="static/css/predict.css" rel="stylesheet">
+    
+        </head>
+
+<body>
+    
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Prediction Form</h2>
+                </div>
+                <div class="card-body">
+                    <form id="myForm" action="/predictresult" method="post">
+                        <div class="form-row">
+                            <div class="name">Age</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" name="age"  placeholder="Age" required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Sex</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" id="sex" name="sex" placeholder="Male or Female" required="required" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">On Thyroxine Medication</div>
+                            <div class="value">
+                                
+                                <div class="input-group">
+                                    <input class="input--style-5" id="on_thyroxine" name="on_thyroxine" placeholder="True or False" required="required" >
+                                    
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">On Antithyroid Medication</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" id="on_antithyroid_meds" name="on_antithyroid_meds" placeholder="True or False" required="required" >
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="name">Pregnant</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" id="pregnant" name="pregnant" placeholder="True or False" required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Thyroid Surgery</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" id="thyroid_surgery" name="thyroid_surgery" placeholder="True or False" required="required" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Tumor</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" id="tumor" name="tumor" placeholder="True or False" required="required" >
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="form-row">
+                            <div class="name">TSH Level</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" name="TSH" required="required" step="any">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">T3 Level</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" name="T3" required="required" step="any">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">TT4 Level</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" name="TT4" required="required" step="any">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">T4U Level</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" name="T4U" required="required" step="any">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Free Thyroxine Index(FTI)</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" name="FTI" required="required" step="any">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                            <button class="btn btn--radius-2 btn--red" type="submit">Predict</button>
+                        </div>
+                        
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+       const myForm = document.querySelector('#myForm');
+     myForm.addEventListener('submit', function(event) {
+    sex=document.getElementById("sex").value;
+    pregnant=document.getElementById("pregnant").value;
+    if (sex=="Male" && pregnant=="True") {
+      alert("Male can't be pregnant. Please recheck form");
+      event.preventDefault(); 
+    }
+   
+  });
+  on_thyroxine=document.getElementById("on_thyroxine").value;
+  console.log(on_thyroxine);
+    </script>
+
+</body>
+
+</html>
