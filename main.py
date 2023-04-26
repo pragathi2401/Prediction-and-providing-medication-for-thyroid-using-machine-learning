@@ -112,7 +112,7 @@ def predictresult():
           It's important to eat a variety of nutrient-rich foods, including whole grains, fruits, vegetables, lean proteins, and healthy fats.<br>
         3. Exercise regularly. Regular exercise can help to boost energy levels and support overall health. It's important to check with a healthcare provider before starting an exercise program, especially if you have any other medical conditions.<br>
         4. Manage stress levels. Chronic stress can affect the body's hormonal balance, including the production of thyroid hormone. Engaging in stress-reducing activities such as meditation, yoga, or deep breathing exercises may be helpful.<br>
-        5.Attend regular follow-up appointments with a healthcare provider. Thyroid function should be regularly monitored to ensure that hormone levels are within a healthy range.
+        5.Attend regular follow-up appointments with a healthcare provider. Thyroid function should be regularly monitored to ensure that hormone levels are within a healthy range.<br>
         6. As well as you can take vitamin B supplements and probiotics.<br>
         </span></p></div>
     """
